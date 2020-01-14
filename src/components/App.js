@@ -2,9 +2,10 @@ import React from 'react';
 
 import Login from './auth/login';
 
-import Main from './front_page/main';
+import MainAdmin from './admin/main';
+import MainFront from './front_page/main';
 
-import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom'
+import {BrowserRouter as Router ,Route,Switch,Redirect} from 'react-router-dom'
 
 class App extends React.Component {
     constructor() {
@@ -45,13 +46,13 @@ class App extends React.Component {
             )
         }
             return (
-                <Router>
-                  
+                <Router >
                     <form onSubmit={this.handleSubmit}>
-                        <Route path='/' exact component={Login}/>
+                        <Route path='/login' exact component={Login}/>
                     </form>
                 
-                    <Route path='/admin' component={Main}/>
+                    <Route path='/admin' component={MainAdmin}/>
+                    <Route path='/' exact component={MainFront}/>
                     
                 </Router>
             )
