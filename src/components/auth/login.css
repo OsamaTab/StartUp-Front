@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Gudea:400,700);
+*, *::before, *::after {
+  box-sizing: content-box;
+}
 body {
   -webkit-perspective: 800px;
           perspective: 800px;

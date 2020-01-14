@@ -8633,7 +8633,11 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
   
- 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
   
   html {
     font-family: sans-serif;
@@ -20802,7 +20806,7 @@
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
-    width: 155px;
+    width: 237px;
     height: 70px;
   }
   

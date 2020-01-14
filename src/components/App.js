@@ -1,9 +1,10 @@
 import React from 'react';
 
 import Login from './auth/login';
-import Header from './admin/header';
-import Conternt from './admin/content';
-import Footer from './admin/footer';
+import Header from './front_page/header';
+import Main from './front_page/main';
+
+
 
 class App extends React.Component {
     constructor() {
@@ -50,12 +51,11 @@ class App extends React.Component {
                 </form>
             );
         }
-        
+
         return(
-            <div>
+            <div className='container-scroller'>
                 <Header />
-                <Conternt />
-                <Footer />
+                <Main />
             </div>
         )
     }
