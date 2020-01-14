@@ -285,7 +285,7 @@ function Login() {
 						</div>
 					</div>
 					<div class='login_fields__submit'>
-						<Link to='/admin'>
+						<Link to='/admin/dashboard'>
 							<input type='submit' value='Log In' />
 						</Link>
 						<div class='forgot'>
