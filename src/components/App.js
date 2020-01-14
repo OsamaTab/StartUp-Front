@@ -1,9 +1,10 @@
 import React from 'react';
 
 import Login from './auth/login';
-import Header from './front_page/header';
+
 import Main from './front_page/main';
 
+import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom'
 
 
 class App extends React.Component {
@@ -44,20 +45,18 @@ class App extends React.Component {
                 </div>
             )
         }
-        if (this.state.isLogdin == false) {
             return (
-                <form onSubmit={this.handleSubmit}>
-                    <Login />
-                </form>
-            );
-        }
-
-        return(
-            <div className='container-scroller'>
-                <Header />
-                <Main />
-            </div>
-        )
+                <Router>
+                  
+                    <form onSubmit={this.handleSubmit}>
+                        <Route path='/' exact component={Login}/>
+                    </form>
+                
+                    <Route path='/admin' component={Main}/>
+                    
+                </Router>
+            )
+        
     }
 
 }
