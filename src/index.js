@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import './bootstrap.css'
+import './themify-icons.css'
+import './style.css'
 import './index.css';
 
 import App from './components/App';
